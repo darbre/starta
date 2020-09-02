@@ -28,7 +28,7 @@ window.onload = function() {
         } else {
             var formData = $('form').serialize();
 
-            $.post("ajax.php", formData, function(data) { //  передаем и загружаем данные с сервера с помощью HTTP запроса методом POST
+            $.post("ajax.php", formData, function(data) { 
                 if (data == 'ok') {
                 	te=$('input[id="data"]')[0].value
                     alert('Забронирована дата '+te+' на номер телефона '+$('input[id="phone"]')[0].value+'!')
@@ -37,7 +37,7 @@ window.onload = function() {
                     $('input[id="data"]')[0].value=''
                     $('input[id="phone"]')[0].value=''
                 } else {
-                    alert('Ошбика на стороне сервера!')
+                    alert('Ошибка на стороне сервера!')
                 }
             })
         }
