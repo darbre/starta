@@ -1,0 +1,39 @@
+* { box-sizing: border-box; margin: 0 auto; padding: 0; font-family: 'Ubuntu', sans-serif; }
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap');
+.contain{max-width: 1300px;width: 100%;padding: 90px 20px;}
+h1{font-size: 48px;color:#488d64;}
+h2{font-size: 18px;color:#383838;font-weight: 400;}
+.calendar{width: 100%;margin: 35px 0 25px;}
+.month{display: inline-block;
+ width: 185px;height: 204px;background-color: #ebf5ec;
+ border-radius: 5px;border: 1px solid #92c29d;
+ margin: 7px;}
+.m-title{color: #0d592d;font-size: 18px;border-bottom: 1px solid #8d978e;width: 80%;
+text-align: center;
+margin: 5px auto;line-height: 1.4;}
+.calendar table th,.calendar table td{width: 20px;height: 20px;color:#2d6f49;font-size: 14px;text-align: center;}
+.calendar table th,.calendar table td:not(:empty){font-weight: 500;background-color: #ffffff;}
+.calendar table th:nth-child(n+6){background-color: #e2907a;color: #fff;}
+.calendar table td{font-weight: 500;cursor: pointer;}
+.calendar table td.today{border: 1px solid #e2907a;border-radius: 30px;}
+.calendar table td.reserved{background-color: #f9907a;pointer-events: none;color: #fff;}
+.calendar table td.choice{background-color: #77b97e;color: #fff;}
+.calendar table tbody:before {
+ content: "";
+    display: block;
+    height: 5px;
+}
+#alert{color: #f9907a;}
+label{margin-bottom: 10px;display: inline-block;}
+input{color: #afafaf;width: 182px;height: 39px;border: none; box-shadow: inset 0px 0px 25px rgba(0,0,0,0.3);padding: 0 12px;outline: none;font-size: 16px;}
+#button{width: 182px;height: 39px;border: none; background-color: #2d6f49;color: #fff;font-size: 18px;vertical-align: bottom;margin-left: 20px;display: inline-block;
+line-height: 39px;
+text-align: center;cursor: pointer;}
+input:focus{color: #3c3c3c;}
+@media screen and (max-width:750px) {
+	h1{font-size: 24px;}
+	h2{font-size: 14px;}
+	.contain{padding: 30px;}
+	.calendar,form,#alert{text-align: center;}
+	#button{margin: 10px 0;}
+}
